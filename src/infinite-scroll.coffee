@@ -50,7 +50,7 @@ mod.directive 'infiniteScroll', ['$rootScope', '$window', '$timeout', 'THROTTLE_
         if scrollEnabled
           # Always schedule another check to see if the container is full after the call
           $timeout (->
-          handler()
+            handler()
           ), 0
           if scope.$$phase || $rootScope.$$phase
             scope.infiniteScroll()

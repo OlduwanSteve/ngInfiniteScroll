@@ -45,7 +45,9 @@ mod.directive('infiniteScroll', [
           if (shouldScroll) {
             checkWhenEnabled = true;
             if (scrollEnabled) {
-              $timeout((function() {}, handler()), 0);
+              $timeout((function() {
+                return handler();
+              }), 0);
               if (scope.$$phase || $rootScope.$$phase) {
                 return scope.infiniteScroll();
               } else {
