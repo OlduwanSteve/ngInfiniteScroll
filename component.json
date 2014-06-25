@@ -1,9 +1,10 @@
 {
-  "name": "ng-infinite-scroll",
-  "repository": "sroze/ngInfiniteScroll",
+  "name": "nginfinitescroll",
+  "repo": "sroze/ngInfiniteScroll",
   "description": "Infinite scrolling for AngularJS",
   "version": "1.1.2",
   "keywords": ["scroll", "infinite", "angular", "angularjs"],
   "scripts": ["build/ng-infinite-scroll.min.js"],
+  "dependencies":[],
   "license": "MIT"
 }
