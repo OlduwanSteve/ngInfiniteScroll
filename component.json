@@ -4,6 +4,6 @@
   "description": "Infinite scrolling for AngularJS",
   "version": "1.1.2",
   "keywords": ["scroll", "infinite", "angular", "angularjs"],
-  "scripts": ["build/ng-infinite-scroll-min.js"],
+  "scripts": ["build/ng-infinite-scroll.min.js"],
   "license": "MIT"
 }
