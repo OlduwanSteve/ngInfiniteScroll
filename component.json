@@ -1,6 +1,6 @@
 {
   "name": "nginfinitescroll",
-  "repo": "sroze/ngInfiniteScroll",
+  "repo": "olduwansteve/nginfinitescroll",
   "description": "Infinite scrolling for AngularJS",
   "version": "1.1.2",
   "keywords": ["scroll", "infinite", "angular", "angularjs"],
