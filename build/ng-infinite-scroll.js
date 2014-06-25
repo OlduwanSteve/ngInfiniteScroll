@@ -1,4 +1,4 @@
-/* ng-infinite-scroll - v1.1.2 - 2014-05-21 */
+/* ng-infinite-scroll - v1.1.2 - 2014-06-25 */
 var mod;
 
 mod = angular.module('infinite-scroll', []);
@@ -41,10 +41,11 @@ mod.directive('infiniteScroll', [
             elementBottom = $(document).height();
           }
           remaining = elementBottom - containerBottom;
-          shouldScroll = remaining <= container.height() * scrollDistance + 1;
+          shouldScroll = remaining <= container.height() * (scrollDistance + 1);
           if (shouldScroll) {
             checkWhenEnabled = true;
             if (scrollEnabled) {
+              $timeout((function() {}, handler()), 0);
               if (scope.$$phase || $rootScope.$$phase) {
                 return scope.infiniteScroll();
               } else {

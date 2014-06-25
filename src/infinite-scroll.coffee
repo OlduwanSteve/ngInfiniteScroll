@@ -42,12 +42,16 @@ mod.directive 'infiniteScroll', ['$rootScope', '$window', '$timeout', 'THROTTLE_
         elementBottom = $(document).height()
 
       remaining = elementBottom - containerBottom
-      shouldScroll = remaining <= container.height() * scrollDistance + 1
+      shouldScroll = remaining <= container.height() * (scrollDistance + 1)
 
       if shouldScroll
         checkWhenEnabled = true
 
         if scrollEnabled
+          # Always schedule another check to see if the container is full after the call
+          $timeout (->
+          handler()
+          ), 0
           if scope.$$phase || $rootScope.$$phase
             scope.infiniteScroll()
           else
